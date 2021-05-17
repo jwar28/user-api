@@ -15,27 +15,23 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @GetMapping
     public List<User> getUsers() {
         return userService.getUsers();
     }
 
-    @PostMapping
-    public User saveUser(@RequestBody User user) {
+    public User saveUser(User user) {
         return userService.saveUser(user);
     }
 
-    @DeleteMapping(path = "/{id}")
-    public String deleteUserById(@PathVariable("id") Long id) {
+    public String deleteUserById(Long id) {
         Boolean ok = userService.deleteUserById(id);
         if (ok) {
             return "User succesfully deleted";
         }
-        return "The user doesn't exist in the database";
+        return "The user doesn't exist";
     }
 
-    @GetMapping(path = "/{id}")
-    public User getUserById(@PathVariable("id") Long id) {
+    public User getUserById(Long id) {
         Optional<User> user = userService.getUserById(id);
         return user.orElse(null);
     }

@@ -2,12 +2,10 @@ package com.example.demo.routes;
 
 import com.example.demo.controllers.UserController;
 import com.example.demo.models.User;
-import com.example.demo.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/users")
