@@ -7,12 +7,4 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class DemoApplicationTests {
-
-	UserService userService = new UserService();
-	@Test
-	void saveUserTest() {
-		User user = new User("Jwar28", "andrescalvo");
-		userService.saveUser(user);
-	}
-
 }
