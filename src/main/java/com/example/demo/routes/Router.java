@@ -8,13 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping
 public class Router {
 
-    @GetMapping()
+    @GetMapping
     public String getHome() {
-        return "Home";
-    }
-
-    @GetMapping("/")
-    public String getAndres() {
-        return "ANDRES MARICON";
+        return "Bienvenida la chavalada";
     }
 }
